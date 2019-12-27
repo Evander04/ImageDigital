@@ -1,0 +1,1 @@
+INSERT INTO roles(id,description, name) VALUES (1,'Todos los permisos', 'ROOT');

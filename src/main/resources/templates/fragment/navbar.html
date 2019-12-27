@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<body>
+<ul id="dropdown1" class="dropdown-content">
+    <li><a href="#!">Cerrar Sesión</a></li>
+    <li><a href="#!">Usuario</a></li>
+    <!--        <li class="divider"></li>-->
+    <!--        <li><a href="#!">three</a></li>-->
+</ul>
+<nav th:fragment="navbar">
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Logo</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="sass.html">Ventas</a></li>
+            <li><a href="badges.html">Pedidos</a></li>
+            <li><a th:href="@{/branch}">Sucursales</a></li>
+            <li><a href="collapsible.html">Usuarios</a></li>
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Usuario<i class="material-icons right">arrow_drop_down</i></a></li>
+        </ul>
+    </div>
+</nav>
+</body>
+</html>

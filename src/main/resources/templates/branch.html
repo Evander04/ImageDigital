@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Imagen Digital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--    <link type="text/css" rel="stylesheet" th:href="@{/static/css/home.css}"/>-->
+    <link type="text/css" rel="stylesheet" th:href="@{/css/materialize.min.css}" media="screen,projection"/>
+
+</head>
+<body>
+
+    <div th:replace="fragment/navbar :: navbar"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-md-4" th:each="branch : ${lsBranch}" th:id='${branch.id}'>
+                <div th:replace="card/cardBranch :: cardBranch" ></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div th:replace="modal/modalBranch :: modalBranch"></div>
+    <a class="waves-effect waves-light btn modal-trigger" style="float: right" href="#modalBranch"><i class="material-icons">add</i>Crear</a>
+
+
+    <script type="text/javascript" th:src="@{/js/branch.js}"></script>
+
+    <script type="text/javascript"  th:src="@{/js/materialize.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/jquery-2.1.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/http.js}"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <div id="modalBranch" class="modal" th:fragment="modalBranch">
+
+        <div class="modal-content">
+            <h4>Sucursal</h4>
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="name" type="text" class="validate">
+                    <label for="name">Nombre</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">phone</i>
+                    <input id="phone" type="text" class="validate">
+                    <label for="phone">Teléfono</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">my_location</i>
+                    <textarea id="address" class="materialize-textarea"></textarea>
+                    <label for="address">Dirección</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <a db="0" id="submitBranch" href="#!" class="modal-close waves-effect waves-light btn"><i class="material-icons right">add</i>Crear</a>
+        </div>
+
+    </div>
+</body>
+</html>
